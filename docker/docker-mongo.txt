@@ -1,0 +1,17 @@
+docker container run ^
+-dp 27017:27017 ^
+--name nestDb ^
+-e MONGO_INITDB_ROOT_USERNAME=asuri ^
+-e MONGO_INITDB_ROOT_PASSWORD=asuri ^
+-e MONGO_INITDB_DATABASE=pokedb ^
+-v ./pokemon:/data/db ^
+mongo
+
+// docker sin usuario ni contraseña
+// url de conexion  mongodb://localhost:27017/nombre-db
+
+docker container run ^
+-dp 27017:27017 ^
+--name nestDb ^
+-v ./datadb:/data/db ^
+mongo

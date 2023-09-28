@@ -1,0 +1,23 @@
+docker container run ^
+-dp 3307:3306 ^
+--name facDb ^
+-e MYSQL_ROOT_PASSWORD=root ^
+-e MYSQL_USER=asuri ^
+-e MYSQL_PASSWORD=asuri ^
+-e MYSQL_DATABASE=fac-db ^
+-v fac:/var/lib/mysql ^
+mysql:8.0
+
+
+docker container run ^
+-dp 3308:3306 ^
+--name paymentDb ^
+-e MYSQL_ROOT_PASSWORD=root ^
+-e MYSQL_USER=asuri ^
+-e MYSQL_PASSWORD=asuri ^
+-e MYSQL_DATABASE=payment-api ^
+-v payment:/var/lib/mysql ^
+mysql:8.0
+
+
+

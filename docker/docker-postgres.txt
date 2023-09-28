@@ -1,0 +1,21 @@
+docker container run ^
+-dp 5432:5432 ^
+--name postgresDb ^
+-e POSTGRES_USER=asuri ^
+-e POSTGRES_PASSWORD=asuri ^
+-e POSTGRES_DB=shopDb ^
+-v mountData:/var/lib/postgresql/data ^
+postgres:alpine3.18
+
+
+psql -U asuridev -W
+
+
+docker container run ^
+-dp 5432:5432 ^
+--name commerce ^
+-e POSTGRES_USER=asuridev ^
+-e POSTGRES_PASSWORD=asuridev ^
+-e POSTGRES_DB=commerceDb ^
+-v commerceData:/var/lib/postgresql/data ^
+postgres:alpine3.18

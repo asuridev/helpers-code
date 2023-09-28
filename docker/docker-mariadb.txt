@@ -1,0 +1,9 @@
+docker container run ^
+-dp 3307:3306 ^
+--name mariaDbContainer ^
+-e MARIADB_USER=antonio ^
+-e MARIADB_PASSWORD=Venus72342406 ^
+-e MARIADB_ROOT_PASSWORD=root ^
+-e MARIADB_DATABASE=world-db ^
+-v world-db:/var/lib/mysql ^
+mariadb:jammy

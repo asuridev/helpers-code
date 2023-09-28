@@ -1,0 +1,5 @@
+docker container run ^
+--name phpmyadmin ^
+-dp 8045:80 ^
+-e PMA_ARBITRARY=1 ^
+phpmyadmin:5.2.0-apache
